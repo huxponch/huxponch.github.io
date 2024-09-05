@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #080213; 
+    color: #f0f0f0;
+}
+
+nav {
+    background-color: #080213;
+    color: #f0f0f0;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+
+.name {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.card {
+    background-color: #22004c;
+    border: 1px solid #290066;
+    border-radius: 8px;
+    width: 30%;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 200px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    height: auto;
+    max-height: none;
+    background-color: #3a007a;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    background-color: #2c0070;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover h2 {
+    background-color: #48009e;
+}
+
+.card-content {
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    height: 0;
+    overflow: hidden;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+    overflow: visible;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #C79CF9;
+}
+
+a {
+    color: #d0d0d0;
+}
+
+a:hover {
+    color: #C79CF9;
+    text-decoration: underline;
+}
+
+.subtext {
+    color: #C79CF9;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+}
